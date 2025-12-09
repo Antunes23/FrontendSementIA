@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+/* RESET GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  /* Fonte moderna */
+}
+
+/* CONTAINER PRINCIPAL (FUNDO) */
+.page-login {
+  min-height: 100vh;
+  width: 100%;
+  /* Imagem de fundo com filtro escuro para dar contraste */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("/backgroundPlantacao.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Centralização perfeita (Vertical e Horizontal) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* O CARTÃO DE VIDRO (GLASSMORPHISM) */
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  /* Branco bem transparente */
+  backdrop-filter: blur(12px);
+  /* O efeito de embaçar o fundo */
+  -webkit-backdrop-filter: blur(12px);
+  /* Para Safari */
+
+  padding: 40px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Borda fina brilhante */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  /* Sombra forte para destacar */
+
+  width: 100%;
+  max-width: 400px;
+  /* Largura máxima do cartão */
+  text-align: center;
+  color: white;
+}
+
+/* TÍTULO */
+.login-container h1 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+/* FORMULÁRIO */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* Espaço entre os inputs */
+}
+
+/* INPUTS (CAMPOS DE TEXTO) */
+.login-input {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  /* Branco quase sólido */
+  color: #333;
+  /* Texto escuro para leitura fácil */
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Efeito ao clicar no input */
+.login-input:focus {
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.6);
+  /* Brilho verde */
+  transform: scale(1.02);
+}
+
+/* BOTÃO DE ENTRAR */
+.login-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+
+  /* Degradê Verde Agritech */
+  background: linear-gradient(135deg, #10B981 0%, #047857 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  transform: translateY(-2px);
+  /* Botão sobe levemente */
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+  background: linear-gradient(135deg, #34D399 0%, #059669 100%);
+}
+
+/* LINKS (Cadastre-se) */
+.register-link {
+  margin-top: 25px;
+  font-size: 0.9rem;
+}
+
+.link {
+  color: #fff;
+  /* Branco para destacar no fundo escuro */
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+
+.link:hover {
+  text-decoration: underline;
+  opacity: 1;
+  color: #A7F3D0;
+  /* Verde claro ao passar o mouse */
+}

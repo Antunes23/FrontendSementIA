@@ -1,0 +1,91 @@
+/* --- RESET LOCAL --- */
+.tarefas_container * { box-sizing: border-box; }
+
+/* CONTAINER PRINCIPAL */
+.tarefas_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    /* Centraliza se for a prancheta */
+    align-items: center; 
+    justify-content: center;
+    padding: 40px;
+}
+
+/* =================== ESTADO VAZIO (PRANCHETA) =================== */
+.tarefas_empty_card {
+    width: 100%;
+    max-width: 800px;
+    min-height: 450px;
+    background-color: #f0fdf4; /* Verde muito claro */
+    border: 1px solid #86efac; /* Borda verde clara */
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.tarefas_icon_wrapper { margin-bottom: 25px; color: #064e3b; }
+.tarefas_icon_wrapper i { font-size: 5rem; }
+
+.tarefas_title {
+    font-size: 1.8rem; font-weight: 700; color: #3f2e18; margin-bottom: 10px;
+}
+
+.tarefas_description {
+    font-size: 1rem; color: #5c5c5c; max-width: 500px; line-height: 1.5; margin-bottom: 30px;
+}
+
+/* Botão Adicionar (Verde Escuro) */
+.tarefas_btn_add {
+    background-color: #064e3b; color: white; padding: 12px 30px; border-radius: 8px; font-weight: 600;
+    font-size: 1rem; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+    transition: background-color 0.2s; border: none; cursor: pointer;
+}
+.tarefas_btn_add:hover { background-color: #022c22; }
+.tarefas_btn_add i { font-size: 1.1rem; }
+
+
+/* =================== ESTADO COM DADOS (LISTA) =================== */
+.tarefas_content_wrapper {
+    width: 100%; max-width: 900px; align-self: center; display: flex; flex-direction: column;
+}
+
+/* Botão "+ Adicionar" no topo da lista */
+.tarefas_header_actions {
+    display: flex; justify-content: flex-end; margin-bottom: 20px;
+}
+
+/* Caixa da lista estilo "caderno" verde */
+.caixa-lista-verde {
+    background-color: #ecfdf5; /* Fundo verde claro */
+    border: 1px solid #10B981;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.item-tarefa {
+    display: flex; align-items: flex-start; gap: 15px;
+    padding-bottom: 15px; margin-bottom: 15px;
+    border-bottom: 1px solid #bbf7d0; /* Linha verde */
+}
+
+.caixa-selecao {
+    width: 20px; height: 20px; margin-top: 5px; cursor: pointer; accent-color: #059669;
+}
+
+.texto-tarefa { flex: 1; }
+
+.titulo-tarefa {
+    font-weight: 700; color: #064e3b; font-size: 1.1rem; margin: 0 0 5px 0;
+}
+
+.detalhe-tarefa { color: #047857; font-size: 0.95rem; margin: 0; }
+
+.tarefas_loading { text-align: center; color: #666; margin-top: 50px; }

@@ -1,0 +1,44 @@
+.tarefa-form-container {
+    display: flex; justify-content: center; padding: 40px; width: 100%;
+}
+
+.tarefa-form-box {
+    background-color: #ecfdf5; /* Verde claro */
+    border: 1px solid #10B981; /* Borda verde */
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%; max-width: 700px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.tarefa-titulo {
+    text-align: center; color: #064e3b; margin-bottom: 30px; font-size: 1.6rem; font-weight: 600;
+}
+
+.campo-grupo { margin-bottom: 20px; }
+
+.campo-grupo label {
+    display: block; font-weight: 600; color: #065f46; margin-bottom: 8px; font-size: 1rem;
+}
+
+/* Input BRANCO */
+.tarefa-input {
+    width: 100%; padding: 12px;
+    background-color: white;
+    border: 1px solid #9ca3af;
+    border-radius: 6px; outline: none; font-size: 1rem; color: #1f2937;
+}
+
+.tarefa-input:focus { border-color: #10b981; box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.1); }
+
+.tarefa-textarea { resize: vertical; min-height: 100px; }
+
+.tarefa-botoes { display: flex; gap: 15px; margin-top: 30px; justify-content: center; }
+
+.btn-salvar {
+    background-color: #15803d; color: white; padding: 12px 35px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 1rem;
+}
+
+.btn-cancelar {
+    background-color: #10B981; color: white; padding: 12px 35px; text-decoration: none; font-weight: 600; border-radius: 8px; display: flex; align-items: center;
+}

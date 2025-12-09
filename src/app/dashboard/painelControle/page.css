@@ -1,0 +1,184 @@
+/* app/globals.css */
+
+:root {
+  --cor-verde-escuro: #064e3b;
+  --cor-verde-medio: #059669;
+  --cor-verde-claro: #d1fae5;
+  --cor-fundo-principal: #f9fafb;
+  --cor-fundo-card: #ffffff;
+  --cor-texto-branco: #ffffff;
+  --cor-texto-escuro: #1f2937;
+  --cor-texto-cinza: #6b7280;
+  --cor-alerta-fundo: #fef3c7;
+  --cor-alerta-borda: #fde68a;
+  --sombra-padrao: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--cor-fundo-principal);
+  color: var(--cor-texto-escuro);
+}
+
+/* LAYOUT PRINCIPAL */
+.main-content {
+  flex-grow: 1;
+  padding: 2rem 3rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* --- SEÇÃO DE TALHÃO (NOVO) --- */
+.talhao-section {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #f3f4f6; /* Fundo leve cinza para separar visualmente */
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.talhao-header {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cor-verde-escuro);
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 5px solid var(--cor-verde-medio);
+}
+
+/* GRID DE CARDS */
+.data-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: var(--cor-fundo-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--cor-verde-claro);
+  box-shadow: var(--sombra-padrao);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.card-title {
+  font-weight: 600;
+  color: var(--cor-texto-cinza);
+  font-size: 1rem;
+}
+
+.card-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  flex-grow: 1;
+}
+
+.card-main i {
+  font-size: 2rem;
+  color: var(--cor-verde-medio);
+}
+
+.card-main-value {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--cor-texto-escuro);
+}
+
+/* CARD NPK */
+.card-npk-values {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.8rem 0;
+  flex-grow: 1;
+}
+
+/* TELA DE FALLBACK (CENTRALIZADA) */
+.fallback-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    min-height: 60vh;
+    padding: 1rem;
+}
+
+.fallback-card {
+    background-color: var(--cor-fundo-card);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: center;
+    border-top: 6px solid var(--cor-verde-medio);
+}
+
+.fallback-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 0.5rem;
+}
+
+.fallback-text {
+    color: var(--cor-texto-cinza);
+    margin-bottom: 2rem;
+}
+
+.fallback-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--cor-verde-medio);
+    color: var(--cor-texto-branco);
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(5, 150, 105, 0.4);
+}
+
+.fallback-button:hover {
+    background-color: var(--cor-verde-escuro);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1200px) {
+  .data-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .data-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
